@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
+const double latitude = 45.521563;
+const double longitude = -122.677433;
+const double zoom = 11.0;
+
 void main() {
   runApp(MyApp());
 }
@@ -29,7 +33,7 @@ class _MyAppState extends State<MyApp> {
       ),
       body: GoogleMap(
         onMapCreated: _onMapCreated,
-        initialCameraPosition: CameraPosition(target: _center, zoom: 11.0),
+        initialCameraPosition: CameraPosition(target: _center, zoom: zoom),
       ),
     ));
   }
